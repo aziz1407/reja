@@ -15,17 +15,14 @@ app.set("views engine", "ejs");
 
 
 // 4: Related to routing
-app.get("/hello", function(req, res) {
-res.end(`<h1>Merhaba ya Aiden!</h1>`);
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({test: "success"});
 });
 
-app.get("/gift", function(req, res) {
-    res.end(`<h1>Welcome the Gift World!</h1>`);
+app.get('/', function (req, res) {
+    res.render("harid.ejs");
 });
-
-app.get("/coding", function(req, res) {
-    res.end(`<h1 style="font-style: italic; background: gold;">Coding is neither that onerous nor breeze!</h1>`);
-    });
 
 const server = http.createServer(app);
 let PORT = 1407;
