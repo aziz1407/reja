@@ -1,5 +1,3 @@
-// Home-tasks will be solved here:
-
 // TASK A: 
 
 function countO (o, pneumonoultramicroscopicsilicovolcanoconiosis) {
