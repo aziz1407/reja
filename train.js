@@ -1,19 +1,19 @@
 // TASK A: 
 
-function countO (o, pneumonoultramicroscopicsilicovolcanoconiosis) {
+// function countO (o, pneumonoultramicroscopicsilicovolcanoconiosis) {
  
-    let count = 0;
+//     let count = 0;
     
-    for(let a = 0; a < pneumonoultramicroscopicsilicovolcanoconiosis.length; a++) {
-      if(pneumonoultramicroscopicsilicovolcanoconiosis[a] === o) {
-        count++;
-        }
-      }
-    return count;
-  }
+//     for(let a = 0; a < pneumonoultramicroscopicsilicovolcanoconiosis.length; a++) {
+//       if(pneumonoultramicroscopicsilicovolcanoconiosis[a] === o) {
+//         count++;
+//         }
+//       }
+//     return count;
+//   }
   
-  const check = countO('o', 'pneumonoultramicroscopicsilicovolcanoconiosis');
-  console.log('Check:', check);
+//   const check = countO('o', 'pneumonoultramicroscopicsilicovolcanoconiosis');
+//   console.log('Check:', check);
 
 //   A-Task Solution:
 
@@ -27,3 +27,26 @@ function countO (o, pneumonoultramicroscopicsilicovolcanoconiosis) {
 // Step-6: condition holatida: parameter ikkida 0'chi indexdan boshlangan qiymat (o)ga teng bo'lsa condition true bo'ladi va count++ 
 // true qiymatlarni qo'shib borishni ta'minlaydi.
 // Last step: function call qilindi!
+
+// TASK-B
+
+ function countDigits(word) {
+  let count = 0;
+
+  for(let d = 0; d < word.length; d++) {
+    if(word[d] >= '0', word[d] <= 9) 
+      count++;
+  }
+  return count;
+ }
+
+ const digits = countDigits('a1b4d0u7l2a0z0i3z');
+ console.log('Check:', digits);
+
+// Solution:
+
+// if(word[d] >= '0', word[d] <= 9) count++; shu qismida aytyapmanki: agar word'ning 0 indexi 0ga teng yoki katta bo'lsa va 9dan kichik yoki teng
+// bolsa true qiymatlarni add qilib ket. Va u argumentda necha soz bolsa shuncha marta ishga tushib 9dan kichik sonlar nechta bolsa
+// osha raqamni return qiladi.
+
+//  a1b4d0u7l2a0z0i3z
