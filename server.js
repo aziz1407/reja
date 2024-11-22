@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: true}));
 // 2: Session related codes
 // 3: Related to Views
 app.set("views", "views");
-app.set("views engine", "ejs");
+app.set("view engine", "ejs");
 
 
 // 4: Related to routing
@@ -31,15 +31,15 @@ app.post("/create-item", (req, res) => {
 });
 
 app.get("/author", (req, res) => {
-    res.render("author.ejs", {user: user})
+    res.render("author", {user: user})
 });
 
 app.get('/', function (req, res) {
-    res.render("harid.ejs");
+    res.render("reja");
 });
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-   console.log(`Everything working pretty smoothly: ${PORT}`);
+   console.log(`Everything working pretty smoothly: ${PORT}, http://localhost:3000`);
 });
