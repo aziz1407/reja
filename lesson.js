@@ -19,9 +19,11 @@ function giveAdvice(a, callback) {
     else if(a > 40 && a <=50) callback(null, advice[3]);
     else if(a > 50 && a <=60) callback(null, advice[4]);
     else {
-        setInterval(function() {
-            callback(null, advice[5]);
-        }, 3000);
+        // setInterval(function() {
+            
+        // }, 3000);
+
+        callback(null, advice[5]);
        
     }
 }   

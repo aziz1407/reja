@@ -28,20 +28,20 @@
 // true qiymatlarni qo'shib borishni ta'minlaydi.
 // Last step: function call qilindi!
 
-// TASK-B
+// // TASK-B
 
- function countDigits(word) {
-  let count = 0;
+//  function countDigits(word) {
+//   let count = 0;
 
-  for(let d = 0; d < word.length; d++) {
-    if(word[d] >= '0', word[d] <= 9) 
-      count++;
-  }
-  return count;
- }
+//   for(let d = 0; d < word.length; d++) {
+//     if(word[d] >= 0, word[d] <= 9) 
+//       count++;
+//   }
+//   return count;
+//  }
 
- const digits = countDigits('a1b4d0u7l2a0z0i3z');
- console.log('Check:', digits);
+//  const digits = countDigits('a1b4d0u7l2a0z0i3z');
+//  console.log('Check:', digits);
 
 // Solution:
 
@@ -50,3 +50,19 @@
 // osha raqamni return qiladi.
 
 //  a1b4d0u7l2a0z0i3z
+
+// 
+
+function defineNumberLetter(a) {
+  let count = 0;
+
+  for(let b = 0; b < a.length; b++) {
+    if((a[b] >= "A" && a[b] <= "Z") || (a[b] >= '0' && a[b] <= '9')) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const outcome = defineNumberLetter('Hello 2024 World');
+console.log('Answer is:', outcome);
