@@ -29,6 +29,29 @@ axios.post("/create-item", {reja: createField.value})
 })
 .catch((err) => {
     console.log('Go try again!');
-})
+});
 
+});
+
+document.addEventListener("click", (e) => {
+    // delete oper
+    console.log(e.target)
+    if(e.target.classList.contains("delete-me")) {
+        if(confirm("Sure to delete?")) {
+           axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+           .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove()
+           })
+           .catch((err) => {
+            console.log('Please try again')
+           });
+        } 
+       
+    }
+    
+    // edit oper
+    if(e.target.classList.contains("edit-me")) {
+        alert("Now edit button is pressed!")
+    }
 })
