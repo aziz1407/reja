@@ -94,9 +94,9 @@ class Shop {
     }
 }
 
-const shop = new Shop(5,3,2);
+const shop = new Shop(4,4,3);
 shop.Current();
-shop.Sell(3);
+shop.Sell(2);
 shop.Add(2);
 shop.Left();
 
