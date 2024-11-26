@@ -94,3 +94,54 @@ console.log('Passed here: 1');
 // run();
 
 
+// MITASK-C 
+
+// Shunday class tuzing tuzing nomi Shop, va
+//  uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul.
+//  Har bir method ishga tushgan vaqt ham log qilinsin.
+// MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
+// shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+// @MITASK
+
+const moment = require('moment');
+const schedule = require ('node-schedule')
+
+class Shop {
+    burger_number;
+    cola_number;
+    chips_number;
+
+    constructor(number1, number2, number3) {
+        this.burger_number = number1;
+        this.cola_number = number2;
+        this.chips_number = number3;
+    }
+
+     Current() {
+        console.log(`Currently at ${moment().format('HH: mm')} There are ${this.burger_number} burgers, ${this.cola_number} cola bottles, ${this.chips_number} chips`)
+    }
+
+     Sell(number1) {
+         if(this.burger_number > number1) {
+            this.burger_number -= number1;
+            console.log(`And at ${moment().format('HH: mm')} ${number1} burger is sold and there is ${this.burger_number} burgers left`);
+         }   
+    }
+    
+     Add(number2) {
+        this.cola_number += number2;
+        console.log(`Now, ${moment().format('HH: mm')} ${number2} bottles of cola added to the basket and now we have ${this.cola_number} in total`);
+    }
+
+     Left() {
+        console.log(`Finally at ${moment().format('HH: mm')}, there are ${this.burger_number} burgers, ${this.cola_number} cola bottles and ${this.chips_number} chips`);
+    }
+}
+
+const shop = new Shop(10,5,2);
+shop.Current();
+shop.Sell(3);
+shop.Add(1);
+shop.Left();
+

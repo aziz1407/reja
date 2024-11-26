@@ -47,7 +47,6 @@ document.addEventListener("click", (e) => {
             console.log('Please try again')
            });
         } 
-       
     }
     
     // edit oper
