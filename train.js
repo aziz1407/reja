@@ -104,3 +104,30 @@ shop.Left();
 
 // Class yasab olinib, unga methodlar qoshilib, methodlarga conditionlar berilib, methodlar ichida 
 // moment core package orqali har bir log ishga tushgan payt uchun vaqt berib olindi va methodlar call qilindi!
+
+// D-TASK: Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkLetters(a, b) {
+    if(a.length !== b.length) {
+        return false; 
+    }
+    for(let s = 0; s < a.length; s++) {
+        let startCheck = false; 
+        for (let p = 0; p < b.length; p++) {
+            if (a[s] === b[p]) {
+                startCheck = true; 
+        }
+    }
+        if(startCheck === false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+}
+const resultCheck = checkLetters('abdulaziz', 'zizaludba');
+console.log('Result:', resultCheck);
+const resultCheck2 = checkLetters('me', 'you');
+console.log('Result:', resultCheck2);

@@ -16,22 +16,22 @@ function itemTemplate(item) {
                 </li>`
 }
 
-const createField = document.getElementById("create-field");
+    const createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", (e) => {
-e.preventDefault();
+    document.getElementById("create-form").addEventListener("submit", (e) => {
+    e.preventDefault();
 
-axios.post("/create-item", {reja: createField.value})
-.then((response) => {
+    axios.post("/create-item", {reja: createField.value})
+    .then((response) => {
     document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data))
     createField.value = "";
     createField.focus();
-})
-.catch((err) => {
+    })
+    .catch((err) => {
     console.log('Go try again!');
-});
+    });
 
-});
+    });
 
 document.addEventListener("click", (e) => {
     // delete oper
