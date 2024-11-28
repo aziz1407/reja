@@ -1,3 +1,5 @@
+// const { response } = require("../app");
+
 console.log('Lets see if it is running fine');
 
 function itemTemplate(item) {
@@ -51,6 +53,27 @@ document.addEventListener("click", (e) => {
     
     // edit oper
     if(e.target.classList.contains("edit-me")) {
-        alert("Now edit button is pressed!")
+         let userInput = prompt("Insert your edit", e.target.parentElement.parentElement.querySelector(".text").innerHTML);
+         if(userInput) {
+           axios
+           .post("/edit-item", {id:  e.target.getAttribute("data-id"),
+            new_input: userInput})
+            .then(response => {
+                console.log(response.data)
+                e.target.parentElement.parentElement.querySelector('.text')
+                .innerHTML = userInput;
+            })
+            .catch(err => {
+            console.log('Please try again')
+            })
+         }
     }
+})
+document.getElementById('clean-all').addEventListener("click", () => {
+    axios.post("/delete-all", {delete_all: true})
+    .then((response) => {
+        alert(response.data.state);
+        document.location.reload();
+    })
+    .catch()
 })
