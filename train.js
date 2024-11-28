@@ -131,3 +131,15 @@ const resultCheck = checkLetters('abdulaziz', 'zizaludba');
 console.log('Result:', resultCheck);
 const resultCheck2 = checkLetters('me', 'you');
 console.log('Result:', resultCheck2);
+
+// Solution
+
+// 1. Avvalo harflar bir-biriga togri kelish-kelmasligini bilish uchun:
+// ularning lengthini aniqlab olish kerak!
+// 2. Loop avvalgi looplar bilan bir xil faqat bu yerda 2ta loop tuzilgan.
+// 3. 1-chi loopdan keyin variable ochib uni qiymati = false qilingan.
+// 4. Ikkinchi loopda berilgan conditionga kora, shart true bolsa, osha
+// false ga tenglashtirilgan variable qiymati true qilindi.
+// 5. Shartga kora true bolsa true false bolsa false qaytar deyildi.
+// 6. call qilinib olindi.
+// 7.1 Aytgancha, birinchi shart meet topilmasa, qolgan logika otishni hojati qolmaydi!
