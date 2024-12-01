@@ -1,5 +1,4 @@
 // const { response } = require("../app");
-
 console.log('Lets see if it is running fine');
 
 function itemTemplate(item) {
@@ -23,8 +22,12 @@ function itemTemplate(item) {
     document.getElementById("create-form").addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // console.log('STEP-1 Requesting to backend')
+
     axios.post("/create-item", {reja: createField.value})
+    // console.log('STEP-7 Came back to FrontEnd')
     .then((response) => {
+        // console.log('STEP-8 Applying derived data to FrontEnd')
     document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data))
     createField.value = "";
     createField.focus();
@@ -49,14 +52,15 @@ document.addEventListener("click", (e) => {
             console.log('Please try again')
            });
         } 
-    }
+     }
     
     // edit oper
     if(e.target.classList.contains("edit-me")) {
-         let userInput = prompt("Insert your edit", e.target.parentElement.parentElement.querySelector(".text").innerHTML);
+         let userInput = prompt("Insert your edit", 
+        e.target.parentElement.parentElement.querySelector(".text").innerHTML);
          if(userInput) {
            axios
-           .post("/edit-item", {id:  e.target.getAttribute("data-id"),
+           .post("/edit-item", {id: e.target.getAttribute("data-id"),
             new_input: userInput})
             .then(response => {
                 console.log(response.data)

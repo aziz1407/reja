@@ -59,46 +59,46 @@
 // MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
 // shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-const moment = require('moment');
-const schedule = require ('node-schedule')
+// const moment = require('moment');
+// const schedule = require ('node-schedule')
 
-class Shop {
-    burger_number;
-    cola_number;
-    chips_number;
+// class Shop {
+//     burger_number;
+//     cola_number;
+//     chips_number;
 
-    constructor(number1, number2, number3) {
-        this.burger_number = number1;
-        this.cola_number = number2;
-        this.chips_number = number3;
-    }
+//     constructor(number1, number2, number3) {
+//         this.burger_number = number1;
+//         this.cola_number = number2;
+//         this.chips_number = number3;
+//     }
 
-     Current() {
-        console.log(`Currently at ${moment().format('HH:mm')} There are ${this.burger_number} burgers, ${this.cola_number} cola bottles, ${this.chips_number} chips.`)
-    }
+//      Current() {
+//         console.log(Currently at ${moment().format('HH:mm')} There are ${this.burger_number} burgers, ${this.cola_number} cola bottles, ${this.chips_number} chips.)
+//     }
 
-     Sell(number1) {
-         if(this.burger_number > number1) {
-            this.burger_number -= number1;
-            console.log(`And at ${moment().format('HH:mm')} ${number1} burgers are sold and only ${this.burger_number} burgers left.`);
-         }   
-    }
+//      Sell(number1) {
+//          if(this.burger_number > number1) {
+//             this.burger_number -= number1;
+//             console.log(And at ${moment().format('HH:mm')} ${number1} burgers are sold and only ${this.burger_number} burgers left.);
+//          }   
+//     }
     
-     Add(number2) {
-        this.cola_number += number2;
-        console.log(`Now at ${moment().format('HH:mm')} ${number2} bottles of cola added to the basket and now we have ${this.cola_number} in total.`);
-    }
+//      Add(number2) {
+//         this.cola_number += number2;
+//         console.log(Now at ${moment().format('HH:mm')} ${number2} bottles of cola added to the basket and now we have ${this.cola_number} in total.);
+//     }
 
-     Left() {
-        console.log(`Finally at ${moment().format('HH:mm')}, there are ${this.burger_number} burgers, ${this.cola_number} cola bottles and ${this.chips_number} chips.`);
-    }
-}
+//      Left() {
+//         console.log(Finally at ${moment().format('HH:mm')}, there are ${this.burger_number} burgers, ${this.cola_number} cola bottles and ${this.chips_number} chips.);
+//     }
+// }
 
-const shop = new Shop(4,4,3);
-shop.Current();
-shop.Sell(2);
-shop.Add(2);
-shop.Left();
+// const shop = new Shop(4,4,3);
+// shop.Current();
+// shop.Sell(2);
+// shop.Add(2);
+// shop.Left();
 
 // Solution
 
@@ -108,29 +108,29 @@ shop.Left();
 // D-TASK: Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkLetters(a, b) {
-    if(a.length !== b.length) {
-        return false; 
-    }
-    for(let s = 0; s < a.length; s++) {
-        let startCheck = false; 
-        for (let p = 0; p < b.length; p++) {
-            if (a[s] === b[p]) {
-                startCheck = true; 
-        }
-    }
-        if(startCheck === false) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+// function checkLetters(a, b) {
+//     if(a.length !== b.length) {
+//         return false; 
+//     }
+//     for(let s = 0; s < a.length; s++) {
+//         let startCheck = false; 
+//         for (let p = 0; p < b.length; p++) {
+//             if (a[s] === b[p]) {
+//                 startCheck = true; 
+//         }
+//     }
+//         if(startCheck === false) {
+//             return false;
+//         } else {
+//             return true;
+//         }
+//     }
 
-}
-const resultCheck = checkLetters('abdulaziz', 'zizaludba');
-console.log('Result:', resultCheck);
-const resultCheck2 = checkLetters('me', 'you');
-console.log('Result:', resultCheck2);
+// }
+// const resultCheck = checkLetters('abdulaziz', 'zizaludba');
+// console.log('Result:', resultCheck);
+// const resultCheck2 = checkLetters('me', 'you');
+// console.log('Result:', resultCheck2);
 
 // Solution
 
@@ -143,3 +143,18 @@ console.log('Result:', resultCheck2);
 // 5. Shartga kora true bolsa true false bolsa false qaytar deyildi.
 // 6. call qilinib olindi.
 // 7.1 Aytgancha, birinchi shart meet topilmasa, qolgan logika otishni hojati qolmaydi!
+
+// Task-E
+
+function teskariTarafga(word) {
+    let reversed = '';
+
+    for(let u = word.length - 1; u >= 0; u--){
+        reversed += word[u];
+    }
+    return reversed;
+}
+
+const p = teskariTarafga('zizaludba');
+console.log(p);
+
