@@ -18,7 +18,7 @@ mongodb.connect(connectionString, {
             const server = http.createServer(app);
             let PORT = 5007;
             server.listen(PORT, function() {
-            console.log(`Everything working pretty smoothly: ${PORT}, http://localhost:3000`);
+            console.log(`Everything working pretty smoothly: ${PORT}, http://localhost:${PORT}`);
 });
     }
 });
