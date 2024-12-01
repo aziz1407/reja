@@ -147,14 +147,18 @@
 // Task-E
 
 function teskariTarafga(word) {
-    let reversed = '';
+    let teskari = '';
 
     for(let u = word.length - 1; u >= 0; u--){
-        reversed += word[u];
+        teskari += word[u];
     }
-    return reversed;
+    return teskari;
 }
 
 const p = teskariTarafga('zizaludba');
 console.log(p);
+
+// Solution
+
+// 1. function tuzib olinib, uni ichiga reversed
 
