@@ -160,5 +160,21 @@ console.log(p);
 
 // Solution
 
-// 1. function tuzib olinib, uni ichiga reversed
+// 1. function tuzib olinib, uni ichiga variable ochib stringga tenglab olindi
+// 2. loopdan foydalanilgan, faqat endi u'ni 0ga emas word'ni length'ga tenglashtirilib
+// 3. wordning oxirgi indexidan boshla, va teskarisiga harakatlan u-- commandi berildi
+// 4. teskari variabliga word[u] qiymati qoshib qoyildi
 
+
+function DoubleLetters(f) {
+
+    for(let u = 0; u < f.length - 1; u++) {
+        if(f[u] === f[u + 1]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+const done = DoubleLetters('looping')
+console.log(done);
