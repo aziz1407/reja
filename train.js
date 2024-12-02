@@ -168,7 +168,7 @@ console.log(p);
 
 function DoubleLetters(f) {
 
-    for(let u = 0; u < f.length - 1; u++) {
+    for(let u = 0; u < f.length; u++) {
         if(f[u] === f[u + 1]) {
             return true;
         }
@@ -178,3 +178,4 @@ function DoubleLetters(f) {
 
 const done = DoubleLetters('looping')
 console.log(done);
+
