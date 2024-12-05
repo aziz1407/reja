@@ -1,42 +1,42 @@
 // Callback Function!
 
-console.log('What Jack Ma has to say:')
+// console.log('What Jack Ma has to say:')
 
-const advice  = [
-    'Before 20: Focus on Learning',
-    '20 to 30: Find a Good Boss and a Good Company',
-    '30 to 40: Focus on Strengths',
-    '40 to 50: Do What You are Good At',
-    '50 to 60: Invest in the Next Generation',
-    'After 60: Enjoy Life'
-];
+// const advice  = [
+//     'Before 20: Focus on Learning',
+//     '20 to 30: Find a Good Boss and a Good Company',
+//     '30 to 40: Focus on Strengths',
+//     '40 to 50: Do What You are Good At',
+//     '50 to 60: Invest in the Next Generation',
+//     'After 60: Enjoy Life'
+// ];
 
-function giveAdvice(a, callback) {
-    if(typeof a !== 'number') callback('Please insert a number!', null) 
-    else if(a <=20) callback(null, advice[0]);
-    else if(a > 20 && a <=30) callback(null, advice[1]);
-    else if(a > 30 && a <=40) callback(null, advice[2]);
-    else if(a > 40 && a <=50) callback(null, advice[3]);
-    else if(a > 50 && a <=60) callback(null, advice[4]);
-    else {
-        // setInterval(function() {
+// function giveAdvice(a, callback) {
+//     if(typeof a !== 'number') callback('Please insert a number!', null) 
+//     else if(a <=20) callback(null, advice[0]);
+//     else if(a > 20 && a <=30) callback(null, advice[1]);
+//     else if(a > 30 && a <=40) callback(null, advice[2]);
+//     else if(a > 40 && a <=50) callback(null, advice[3]);
+//     else if(a > 50 && a <=60) callback(null, advice[4]);
+//     else {
+//         // setInterval(function() {
             
-        // }, 3000);
+//         // }, 3000);
 
-        callback(null, advice[5]);
+//         callback(null, advice[5]);
        
-    }
-}   
+//     }
+// }   
 
-console.log('Passed here: 0')
-giveAdvice(70, (err, data) => {
-    if(err) console.log('ERROR:', err);
-    else {
-        console.log("Result:", data);
-    }
-});
+// console.log('Passed here: 0')
+// giveAdvice(70, (err, data) => {
+//     if(err) console.log('ERROR:', err);
+//     else {
+//         console.log("Result:", data);
+//     }
+// });
 
-console.log('Passed here: 1');
+// console.log('Passed here: 1');
 
 
 // Asynchronous Function
@@ -95,10 +95,15 @@ console.log('Passed here: 1');
 
 
 
+function teskariTarafga(word) {
+    let teskari = '';
 
+    for(let u = word.length - 1; u >= 0; u--){
+        teskari += word[u];
+    }
+    return teskari;
+}
 
-
-
-
-
+const p = teskariTarafga('muhammadAli');
+console.log(p);
 

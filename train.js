@@ -146,17 +146,17 @@
 
 // Task-E
 
-function teskariTarafga(word) {
-    let teskari = '';
+// function teskariTarafga(word) {
+//     let teskari = '';
 
-    for(let u = word.length - 1; u >= 0; u--){
-        teskari += word[u];
-    }
-    return teskari;
-}
+//     for(let u = word.length - 1; u >= 0; u--){
+//         teskari += word[u];
+//     }
+//     return teskari;
+// }
 
-const p = teskariTarafga('zizaludba');
-console.log(p);
+// const p = teskariTarafga('zizaludba');
+// console.log(p);
 
 // Solution
 
@@ -166,16 +166,158 @@ console.log(p);
 // 4. teskari variabliga word[u] qiymati qoshib qoyildi
 
 
-function DoubleLetters(f) {
+// function DoubleLetters(f) {
 
-    for(let u = 0; u < f.length; u++) {
-        if(f[u] === f[u + 1]) {
-            return true;
+//     for(let u = 0; u < f.length; u++) {
+//         if(f[u] === f[u + 1]) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// const done = DoubleLetters('looping')
+// console.log(done);
+
+
+
+// TASK-G
+
+// Yagona parametrga ega function tuzing.
+// Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+// Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+
+// MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+// Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+// Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+
+
+function biggestNumber(...numbers) {
+
+    let biggest = numbers[0];
+
+    for(let num of numbers) {
+        if(num > biggest) {
+            biggest = num;
         }
     }
-    return false;
+    return biggest;
 }
 
-const done = DoubleLetters('looping')
-console.log(done);
+const final = biggestNumber(10, 21, 14, 7, 22);
+console.log('Biggest:', final);
 
+
+
+
+
+// function longestWord(hello) {
+//     if(typeof hello !== "string")
+//         return false;
+
+//     let keys = hello.split(' ');
+//     let shortest = keys[2];
+
+//     for(let key of keys) {
+//         if(key.length < shortest.length) {
+//             shortest = key;
+//         }
+//     }
+//     return shortest;
+// }
+
+// const h = longestWord('She loves programming');
+// console.log(h);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function p(a) {
+//     if(typeof a === 'number') return false;
+
+//     let m = a.toLowerCase();
+
+//     let b = m.split('').reverse().join("");
+
+//     if(b === m) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// const j = p('level')
+// const k = p('devil');
+// console.log('j:', j);
+// console.log('k:', k);
+
+
+// function UpperCase(z) {
+//     if(typeof z === 'number') return false;
+
+//     let h = z.toLowerCase()
+
+//     let count = 0;
+
+//     for(let l = 0; l < z.length; l++) {
+//         if(z[l] >= 'a' && z[l] <= 'z')
+//         count = count + 1;
+//     }
+//     return count;
+// }
+
+// const v = UpperCase('Hello Aiden');
+// console.log('Result:', v);
+
+
+// function longestWord(hello) {
+//     if(typeof hello !== "string")
+//         return false;
+
+//     let keys = hello.split(' ');
+//     let shortest = keys[2];
+
+//     for(let key of keys) {
+//         if(key.length < shortest.length) {
+//             shortest = key;
+//         }
+//     }
+//     return shortest;
+// }
+
+// const h = longestWord('She loves programming');
+// console.log(h);
